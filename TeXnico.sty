@@ -8,5 +8,32 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{TeXnico}[30/03/2015 TeXnico]
 
+\RequirePackage{helvet}
+\RequirePackage[portuguese]{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{hyperref}
+\RequirePackage{graphicx}
+\RequirePackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\ttTitulo}{\empty}
+\newcommand{\ttSetTitulo}[1]{\renewcommand{\ttTitulo}{#1}}
+
+\newcommand{\ttSubtitulo}{\empty}
+\newcommand{\ttSetSubtitulo}[1]{\renewcommand{\ttSubtitulo}{#1}}
 
 
+\newcommand{\ttCapa}{
+\begin{titlepage}
+	\includegraphics[width=6.5cm]{IST_A_CMYK_POS}
+	\begin{center}
+	
+	
+	\textbf{\LARGE \ttTitulo}\\[1.5cm]
+	
+	\Large \ttSubtitulo
+	
+	\end{center}
+\end{titlepage}
+}
