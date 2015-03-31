@@ -8,7 +8,7 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{TeXnico}[30/03/2015 TeXnico]
 
-\RequirePackage{helvet}
+\RequirePackage[scaled=0.92]{helvet}
 \RequirePackage[portuguese]{babel}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{hyperref}
@@ -23,16 +23,37 @@
 \newcommand{\ttSubtitulo}{\empty}
 \newcommand{\ttSetSubtitulo}[1]{\renewcommand{\ttSubtitulo}{#1}}
 
+\newcommand{\ttAutor}{\empty}
+\newcommand{\ttSetAutor}[1]{\renewcommand{\ttAutor}{#1}}
+
+\newcommand{\ttDescricao}{\empty}
+\newcommand{\ttSetDescricao}[1]{\renewcommand{\ttDescricao}{#1}}
+
+\newcommand{\ttCurso}{\empty}
+\newcommand{\ttSetCurso}[1]{\renewcommand{\ttCurso}{#1}}
+
+\newcommand{\ttOrientador}{\empty}
+\newcommand{\ttSetOrientador}[1]{\renewcommand{\ttOrientador}{#1}}
+
 
 \newcommand{\ttCapa}{
 \begin{titlepage}
+	\vspace*{-1cm}\hspace*{-1cm}
 	\includegraphics[width=6.5cm]{IST_A_CMYK_POS}
 	\begin{center}
 	
 	
 	\textbf{\LARGE \ttTitulo}\\[1.5cm]
 	
-	\Large \ttSubtitulo
+	\Large \ttSubtitulo\\[1.5cm]
+	
+	\textbf{\Large \ttAutor}\\[1.5cm]
+	
+	\large \ttDescricao\\[1.5cm]
+	
+	\textbf{\LARGE \ttCurso}\\[1.5cm]
+	
+	\large \ttOrientador\\[1.5cm]
 	
 	\end{center}
 \end{titlepage}
