@@ -17,43 +17,86 @@
 
 \renewcommand{\familydefault}{\sfdefault}
 
-\newcommand{\ttTitulo}{\empty}
+\newcommand{\ttLogo}{IST_A_CMYK_POS}
+\newcommand{\ttOverrideLogo}[1]{\renewcommand{\ttLogo}{#1}}
+
+\newcommand{\ttImagem}{\empty}
+\newcommand{\ttSetImagem}[1]{\renewcommand{\ttImagem}{\includegraphics[width=\textwidth]{#1}
+
+\vfill
+
+}}
+
+\newcommand{\ttTitulo}{\errmessage{Título não definido.}}
 \newcommand{\ttSetTitulo}[1]{\renewcommand{\ttTitulo}{#1}}
 
-\newcommand{\ttSubtitulo}{\empty}
+\newcommand{\ttSubtitulo}{\errmessage{Subtítulo não definido.}}
 \newcommand{\ttSetSubtitulo}[1]{\renewcommand{\ttSubtitulo}{#1}}
 
-\newcommand{\ttAutor}{\empty}
+\newcommand{\ttAutor}{\errmessage{Autor não definido.}}
 \newcommand{\ttSetAutor}[1]{\renewcommand{\ttAutor}{#1}}
 
-\newcommand{\ttDescricao}{\empty}
+\newcommand{\ttDescricao}{Dissertação para obtenção do Grau de Mestre em}
 \newcommand{\ttSetDescricao}[1]{\renewcommand{\ttDescricao}{#1}}
 
-\newcommand{\ttCurso}{\empty}
+\newcommand{\ttCurso}{\errmessage{Curso não definido.}}
 \newcommand{\ttSetCurso}[1]{\renewcommand{\ttCurso}{#1}}
 
-\newcommand{\ttOrientador}{\empty}
+\newcommand{\ttOrientador}{\errmessage{Orientador não definido.}}
 \newcommand{\ttSetOrientador}[1]{\renewcommand{\ttOrientador}{#1}}
+
+\newcommand{\ttTBloco}{Júri}
+\newcommand{\ttSetTBloco}[1]{\renewcommand{\ttTBloco}{#1}}
+
+\newcommand{\ttBloco}{\errmessage{Conteúdo do bloco não definido.}}
+\newcommand{\ttSetBloco}[1]{\renewcommand{\ttBloco}{#1}}
+
+\newcommand{\ttData}{\today}
+\newcommand{\ttSetData}[1]{\renewcommand{\ttData}{#1}}
 
 
 \newcommand{\ttCapa}{
 \begin{titlepage}
 	\vspace*{-1cm}\hspace*{-1cm}
-	\includegraphics[width=6.5cm]{IST_A_CMYK_POS}
+	\includegraphics[width=6.5cm]{\ttLogo}
 	\begin{center}
 	
+	\ttImagem
 	
-	\textbf{\LARGE \ttTitulo}\\[1.5cm]
+	\textbf{\LARGE \ttTitulo}
 	
-	\Large \ttSubtitulo\\[1.5cm]
+	\vfill
 	
-	\textbf{\Large \ttAutor}\\[1.5cm]
+	\Large \ttSubtitulo
 	
-	\large \ttDescricao\\[1.5cm]
+	\vfill
 	
-	\textbf{\LARGE \ttCurso}\\[1.5cm]
+	\textbf{\Large \ttAutor}
 	
-	\large \ttOrientador\\[1.5cm]
+	\vfill
+	
+	\large \ttDescricao
+	
+	\vfill
+	
+	\textbf{\LARGE \ttCurso}
+	
+	\vfill
+	
+	\large \ttOrientador
+	
+	\vfill
+	
+	\textbf{\Large \ttTBloco}
+	
+	\vfill
+	
+	\large \ttBloco
+	
+	\vfill
+	
+	\textbf{\Large \ttData}\\[1.5cm]
+	
 	
 	\end{center}
 \end{titlepage}
