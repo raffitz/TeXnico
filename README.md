@@ -2,6 +2,18 @@
 
 Pacote LaTeX para a elaboração de uma tese, de acordo com as especificações do Instituto Superior Técnico, e, mais especificamente, do MEEC.
 
+## Pré-requisitos
+
+Os seguintes pacotes LaTeX devem estar instalados:
+
+- _helvet_
+- _inputenc_
+- _hyperref_
+- _graphicx_
+- _geometry_
+
+Recomenda-se que seja utilizado o pacote _babel_ para especificar a língua do documento.
+
 ## Macros definidas
 
 ### Capa
